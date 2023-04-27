@@ -1,8 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
   "/api/search": "pages/api/search.js",
+  "/_error": "pages/_error.js",
   "/autowrite": "pages/autowrite.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
