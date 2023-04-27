@@ -32,12 +32,13 @@ async function handler(req, res) {
         return;
     }
     // 获取客户端 IP 地址
-    const clientIp = req.headers["x-real-ip"] || req.connection.remoteAddress;
+    const clientIp = req.headers["cf-connecting-ip"] || req.headers["x-real-ip"] || req.connection.remoteAddress;
     // 获取客户端的 User-Agent
     const userAgent = req.headers["user-agent"];
     const { userInput , selectInput  } = req.body;
     try {
-        const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])(`http://34.27.183.138:5000/tuocibao/tuoci?keyword=${encodeURIComponent(userInput)}&seo=${encodeURIComponent(selectInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
+        const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])(// `http://34.27.183.138:5000/tuocibao/tuoci?keyword=${encodeURIComponent(userInput)}&seo=${encodeURIComponent(selectInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`
+        `http://127.0.0.1:8000/tuocibao/tuoci?keyword=${encodeURIComponent(userInput)}&seo=${encodeURIComponent(selectInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
         const data = await response.json();
         res.status(200).json({
             status: "success",
