@@ -38,7 +38,7 @@ async function handler(req, res) {
     const { userInput  } = req.body;
     try {
         const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])(//   `http://127.0.0.1:8000/tuocibao/summary?keyword=${encodeURIComponent(userInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`
-        `http://34.27.183.138:5000/tuocibao/summary?keyword=${encodeURIComponent(userInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
+        `http://127.0.0.1:5000/tuocibao/summary?keyword=${encodeURIComponent(userInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
         const data = await response.json();
         res.status(200).json({
             status: "success",

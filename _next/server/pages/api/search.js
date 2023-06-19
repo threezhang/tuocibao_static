@@ -37,7 +37,7 @@ async function handler(req, res) {
     const userAgent = req.headers["user-agent"];
     const { userInput , selectInput  } = req.body;
     try {
-        const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])(`http://34.27.183.138:5000/tuocibao/tuoci?keyword=${encodeURIComponent(userInput)}&seo=${encodeURIComponent(selectInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
+        const response = await (0,node_fetch__WEBPACK_IMPORTED_MODULE_0__["default"])(`http://127.0.0.1:5000/tuocibao/tuoci?keyword=${encodeURIComponent(userInput)}&seo=${encodeURIComponent(selectInput)}&ip=${encodeURIComponent(clientIp)}&ua=${encodeURIComponent(userAgent)}`);
         const data = await response.json();
         res.status(200).json({
             status: "success",
