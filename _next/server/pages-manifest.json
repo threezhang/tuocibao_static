@@ -1,9 +1,9 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
+  "/_app": "pages/_app.js",
   "/api/search": "pages/api/search.js",
   "/api/summary": "pages/api/summary.js",
+  "/_document": "pages/_document.js",
   "/autowrite": "pages/autowrite.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",

@@ -18,7 +18,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Document(props) {
-    let pageProps = props.__NEXT_DATA__?.props?.pageProps;
+    var _props___NEXT_DATA__, _props___NEXT_DATA___props;
+    let pageProps = (_props___NEXT_DATA__ = props.__NEXT_DATA__) === null || _props___NEXT_DATA__ === void 0 ? void 0 : (_props___NEXT_DATA___props = _props___NEXT_DATA__.props) === null || _props___NEXT_DATA___props === void 0 ? void 0 : _props___NEXT_DATA___props.pageProps;
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(next_document__WEBPACK_IMPORTED_MODULE_1__.Html, {
         className: "h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']",
         lang: "en",
