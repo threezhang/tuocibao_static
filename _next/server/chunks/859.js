@@ -289,9 +289,9 @@ function getNextFontLinkTags(nextFontManifest, dangerousAsPath, assetPrefix = ""
     };
 }
 class Head extends _react.default.Component {
-    static #_ = (()=>{
+    static{
         this.contextType = _htmlContext.HtmlContext;
-    })();
+    }
     getCssLinks(files) {
         const { assetPrefix , devOnlyCacheBusterQueryString , dynamicImports , crossOrigin , optimizeCss , optimizeFonts  } = this.context;
         const cssFiles = files.allFiles.filter((f)=>f.endsWith(".css"));
@@ -611,9 +611,9 @@ function handleDocumentScriptLoaderItems(scriptLoader, __NEXT_DATA__, props) {
     __NEXT_DATA__.scriptLoader = scriptLoaderItems;
 }
 class NextScript extends _react.default.Component {
-    static #_ = (()=>{
+    static{
         this.contextType = _htmlContext.HtmlContext;
-    })();
+    }
     getDynamicChunks(files) {
         return getDynamicChunks(this.context, this.props, files);
     }
